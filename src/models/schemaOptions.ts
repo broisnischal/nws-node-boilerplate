@@ -1,7 +1,7 @@
-import { SchemaOptions } from 'mongoose';
-
-const schemaOptions: SchemaOptions = {
-  toJSON: {
+const schemaOptions: any = {
+  timestamps: true,
+  timeseries: true,
+  toJson: {
     virtuals: true,
   },
   toObject: {
