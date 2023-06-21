@@ -2,7 +2,7 @@ import http from 'node:http';
 import mongoose from 'mongoose';
 // import redisClient from './config/redis.config';
 import logger from './log/logger';
-
+// docs
 const handleProcessEvent = (server: http.Server): void => {
   process.on('SIGINT', async () => {
     try {

@@ -13,7 +13,8 @@
     "prettier": "prettier --config .prettierrc \"./src/**/*.+(js|json|ts)\" --write --ignore-unknown",
     "prettier:check": "prettier --config .prettierrc \"./src/**/*.+(js|json|ts)\" --check --ignore-unknown",
     "test": "mocha -r tsconfig-paths/register -r ts-node/register  \"./src/test/**/*.ts\" --exit",
-    "post-commit-action": "git add ."
+    "post-commit-action": "git add .",
+    "docs": "npx ts-node-dev docs/index.ts"
   },
   "lint-staged": {
     "./src/**/*.+(ts|js)": [
@@ -63,6 +64,7 @@
     "hpp": "^0.2.3",
     "http-errors": "^2.0.0",
     "http-proxy-middleware": "^2.0.6",
+    "hugo": "^0.0.3",
     "i18next": "^23.2.1",
     "ip": "^1.1.8",
     "joi": "^17.9.2",
@@ -71,6 +73,7 @@
     "loadsh": "^0.0.4",
     "log-update": "^5.0.1",
     "lusca": "^1.7.0",
+    "marked": "^5.1.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",
     "mongoose": "^7.3.0",
@@ -110,6 +113,7 @@
     "@types/ip": "^1.1.0",
     "@types/jest": "^29.5.2",
     "@types/jsonwebtoken": "^9.0.2",
+    "@types/marked": "^5.0.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.3.1",
     "@types/supertest": "^2.0.12",
