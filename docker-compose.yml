@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  api:
+    # container_name: EnterpriseNode
+    build: .
+    # volumes:
+    #   - .:/usr/src/app
+    # depends_on:
+    #   - mongo
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+#   mongo:
+#     image: mongo
+#     ports:
+#       - '27017:27017'
+#     restart: unless-stopped
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: root
+#       MONGO_INITDB_ROOT_PASSWORD: root
+#     volumes:
+#       - data:/data/db
+
+# volumes:
+#   data:

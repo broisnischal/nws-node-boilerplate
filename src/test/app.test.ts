@@ -16,7 +16,7 @@ describe('App', () => {
       .get('/')
       .expect(200, (err, res) => {
         if (err) return done(err);
-        expect(res.text).to.equal('Hello World!');
+        expect(res.status).to.equal(200);
         return done();
       });
   });

@@ -1,3 +1,4 @@
+import os from 'node:os';
 import express, { Application, Request, Response } from 'express';
 import sanitizeInput from '@/helpers/sanitize';
 
@@ -13,6 +14,12 @@ app.post('/test', (_req: Request, _res: Response) => {
   //   return res.send(response);
 });
 
-app.get('/', (_req: Request, res: Response) => res.send('Hello World!'));
+app.get('/', (_req: Request, res: Response) => {
+  res.send({
+    message: 'Hello World',
+    hostname: os.hostname(),
+    process: process.pid,
+  });
+});
 
 export default app;
