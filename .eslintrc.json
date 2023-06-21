@@ -10,7 +10,18 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "prettier", "eslint-plugin-import", "eslint-plugin-prettier"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "globals": {
+    "describe": "readonly",
+    "it": "readonly",
+    "before": "readonly",
+    "after": "readonly"
+  },
   "rules": {
     "no-console": "warn"
   }

@@ -12,6 +12,7 @@ app.post('/test', (_req: Request, _res: Response) => {
   //   return res.send(response);
 });
 
+console.log('hi');
 app.get('/', (_req: Request, res: Response) => res.send('Hello World!'));
 
 export default app;
