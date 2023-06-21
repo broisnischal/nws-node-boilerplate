@@ -22,6 +22,8 @@ app.get('/', (req: Request, res: Response) => {
 
   logger.log('info', `X-Real-IP: ${xRealIP}, client ip address ${clientIP}`);
 
+  // what
+
   res.send({
     message: 'Hello World',
     hostname: os.hostname(),
