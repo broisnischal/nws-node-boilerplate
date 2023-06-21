@@ -1,7 +1,7 @@
 import app from '@/app';
 import handleProcessEvent from '@/processEvents';
 import logger from '@logger/logger';
-
+import '@/cronjobs';
 import http from 'node:http';
 import conf from './config.default';
 

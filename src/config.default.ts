@@ -5,6 +5,7 @@ const conf = {
   },
   publicKey: 'thisissuperpublickey',
   privateKey: 'thisisthesuperprivatekey',
+  database: 'test',
 };
 
 export default conf;

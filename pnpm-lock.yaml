@@ -13,6 +13,7 @@ specifiers:
   '@types/marked': ^5.0.0
   '@types/mocha': ^10.0.1
   '@types/node': ^20.3.1
+  '@types/node-cron': ^3.0.7
   '@types/supertest': ^2.0.12
   '@types/unidecode': ^0.1.1
   '@typescript-eslint/eslint-plugin': ^5.60.0
@@ -194,6 +195,7 @@ devDependencies:
   '@types/marked': 5.0.0
   '@types/mocha': 10.0.1
   '@types/node': 20.3.1
+  '@types/node-cron': 3.0.7
   '@types/supertest': 2.0.12
   '@types/unidecode': 0.1.1
   '@typescript-eslint/eslint-plugin': 5.60.0_6yzi2ymi2jevhjfd3hf6w262e4
@@ -2769,6 +2771,10 @@ packages:
 
   /@types/mocha/10.0.1:
     resolution: {integrity: sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==}
+    dev: true
+
+  /@types/node-cron/3.0.7:
+    resolution: {integrity: sha512-9PuLtBboc/+JJ7FshmJWv769gDonTpItN0Ol5TMwclpSQNjVyB2SRxSKBcTtbSysSL5R7Oea06kTTFNciCoYwA==}
     dev: true
 
   /@types/node/20.3.1:
