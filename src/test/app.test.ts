@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import request from 'supertest';
 import { expect } from 'chai';
-import app from '@src/app';
+import app from '@/app';
 
 describe('App', () => {
   before((done) => {
