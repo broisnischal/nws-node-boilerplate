@@ -1,4 +1,7 @@
+// import schemaOptions from '@/models/schemaOptions';
 import { Document, Model, model, Schema, Types, ObjectId } from 'mongoose';
+
+// const options = new Schema(schemaOptions);
 
 export interface IUser extends Document {
   _id?: Types.ObjectId | ObjectId;

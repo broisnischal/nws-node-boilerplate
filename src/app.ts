@@ -1,7 +1,10 @@
 import os from 'node:os';
-import express, { Application, Request, Response } from 'express';
+import express, { Application, NextFunction, Request, Response } from 'express';
 import sanitizeInput from '@/helpers/sanitize';
-import logger from './log/logger';
+import logger from '@/log/logger';
+import errorHandler from '@/utils/errorHandler';
+import CreateError from './utils/customError';
+import { Code } from './enum/v1/code.enum';
 
 const app: Application = express();
 
@@ -22,8 +25,6 @@ app.get('/', (req: Request, res: Response) => {
 
   logger.log('info', `X-Real-IP: ${xRealIP}, client ip address ${clientIP}`);
 
-  // what
-
   res.send({
     message: 'Hello World',
     hostname: os.hostname(),
@@ -32,5 +33,12 @@ app.get('/', (req: Request, res: Response) => {
     xForwardedFor,
   });
 });
+
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+app.get('*', (req: Request, res: Response, next: NextFunction) => {
+  throw new CreateError('Request error, Not found!', Code.NOT_FOUND);
+});
+
+app.use(errorHandler);
 
 export default app;

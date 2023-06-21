@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { ClientSession } from 'mongoose';
+import { ClientSession, ObjectId } from 'mongoose';
 
 export type ControllerFunction = (
   req: Request,
@@ -7,3 +7,8 @@ export type ControllerFunction = (
   next: NextFunction,
   session?: ClientSession,
 ) => Promise<any> | void;
+
+export type MongooseId = ObjectId;
+
+export type EncryptionFunction<T> = (data: T, publicKey?: string) => string;
+export type DecryptionFunction<T> = (encryptedId: string, privateKey?: string) => T;

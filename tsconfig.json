@@ -18,7 +18,8 @@
       "@types/*": ["src/types/*"],
       "@logger/*": ["src/log/*"],
       "@helpers/*": ["src/helpers/*"],
-      "@enums/*": ["src/enums/*"]
+      "@enums/*": ["src/enums/*"],
+      "@token/*": ["src/token/*"]
     },
     "allowJs": true,
     "sourceMap": true,

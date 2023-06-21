@@ -1,19 +1,21 @@
+import { Code } from '@/enum/v1/code.enum';
+
 class HttpResponse {
   public status: number;
 
   public message: string;
 
-  public data?: any;
+  private timeStamp: string;
 
-  constructor(
-    status: number,
-    message: string,
-    data?: object | null | unknown,
-    additionalParams?: { [key: string]: any },
-  ) {
+  // eslint-disable-next-line max-len
+  constructor(status: Code, message: string, private data?: object, additionalParams?: { [key: string]: any }) {
     this.status = status;
     this.message = message;
-    this.data = data;
+    if (data) {
+      this.data = data;
+    }
+
+    this.timeStamp = new Date().toLocaleString();
 
     Object.assign(this, additionalParams);
   }
@@ -21,7 +23,7 @@ class HttpResponse {
   public static success(
     status: number,
     message: string,
-    data?: object | null | unknown,
+    data?: object,
     additionalParams?: { [key: string]: any },
   ): HttpResponse {
     return new HttpResponse(status, message, data, additionalParams);
