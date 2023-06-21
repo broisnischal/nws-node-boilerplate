@@ -1,6 +1,7 @@
 import os from 'node:os';
 import express, { Application, Request, Response } from 'express';
 import sanitizeInput from '@/helpers/sanitize';
+import logger from './log/logger';
 
 const app: Application = express();
 
@@ -17,8 +18,9 @@ app.post('/test', (_req: Request, _res: Response) => {
 app.get('/', (req: Request, res: Response) => {
   const xRealIP = req.headers['x-real-ip'] || req.headers['X-Real-IP'];
   const xForwardedFor = req.headers['x-forwarded-for'] || req.headers['X-Forwarded-For'];
+  const clientIP = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
-  console.log({ xRealIP, xForwardedFor });
+  logger.log('info', `X-Real-IP: ${xRealIP}, client ip address ${clientIP}`);
 
   res.send({
     message: 'Hello World',

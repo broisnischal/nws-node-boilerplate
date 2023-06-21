@@ -63,6 +63,7 @@
     "http-errors": "^2.0.0",
     "http-proxy-middleware": "^2.0.6",
     "i18next": "^23.2.1",
+    "ip": "^1.1.8",
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.0",
     "jwks-rsa": "^3.0.1",
@@ -96,6 +97,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
+    "@types/ip": "^1.1.0",
     "@types/jest": "^29.5.2",
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.3.1",
