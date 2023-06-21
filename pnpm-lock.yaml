@@ -58,6 +58,7 @@ specifiers:
   jsonwebtoken: ^9.0.0
   jwks-rsa: ^3.0.1
   lint-staged: ^13.2.2
+  loadsh: ^0.0.4
   log-update: ^5.0.1
   lusca: ^1.7.0
   mocha: ^10.2.0
@@ -142,6 +143,7 @@ dependencies:
   joi: 17.9.2
   jsonwebtoken: 9.0.0
   jwks-rsa: 3.0.1
+  loadsh: 0.0.4
   log-update: 5.0.1
   lusca: 1.7.0
   moment: 2.29.4
@@ -7672,6 +7674,11 @@ packages:
       parse-json: 4.0.0
       pify: 3.0.0
       strip-bom: 3.0.0
+    dev: false
+
+  /loadsh/0.0.4:
+    resolution: {integrity: sha512-U+wLL8InpfRalWrr+0SuhWgGt10M4OyAk6G8xCYo2rwpiHtxZkWiFpjei0vO463ghW8LPCdhqQxXlMy2qicAEw==}
+    deprecated: This is a typosquat on the popular Lodash package. This is not maintained nor is the original Lodash package.
     dev: false
 
   /locate-path/2.0.0:

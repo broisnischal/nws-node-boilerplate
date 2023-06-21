@@ -68,6 +68,7 @@
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.0",
     "jwks-rsa": "^3.0.1",
+    "loadsh": "^0.0.4",
     "log-update": "^5.0.1",
     "lusca": "^1.7.0",
     "moment": "^2.29.4",
