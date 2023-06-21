@@ -14,11 +14,18 @@ app.post('/test', (_req: Request, _res: Response) => {
   //   return res.send(response);
 });
 
-app.get('/', (_req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
+  const xRealIP = req.headers['x-real-ip'] || req.headers['X-Real-IP'];
+  const xForwardedFor = req.headers['x-forwarded-for'] || req.headers['X-Forwarded-For'];
+
+  console.log({ xRealIP, xForwardedFor });
+
   res.send({
     message: 'Hello World',
     hostname: os.hostname(),
     process: process.pid,
+    xRealIP,
+    xForwardedFor,
   });
 });
 
