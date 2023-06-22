@@ -1,6 +1,20 @@
 version: '3.9'
 
 services:
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+    restart: unless-stopped
+    volumes:
+      - data:/data/db
+  redis:
+    image: redis
+    ports:
+      - '6380:6380'
+    restart: unless-stopped
+    volumes:
+      - redisdata:/data
   api:
     build: .
     # volumes:
@@ -8,7 +22,6 @@ services:
     depends_on:
       - mongo
       - redis
-      - amqplib
 
   nginx:
     image: nginx:latest
@@ -18,29 +31,6 @@ services:
       - 3000:3000
     depends_on:
       - api
-
-  mongo:
-    image: mongo
-    ports:
-      - '27017:27017'
-    restart: unless-stopped
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: root
-    volumes:
-      - data:/data/db
-
-  redis:
-    image: redis
-    ports:
-      - '6379:6379'
-    restart: unless-stopped
-    volumes:
-      - redisdata:/data
-
-  amqplib:
-    image: amqplib
-    # Specify the necessary configuration for amqplib service
 
 volumes:
   data:

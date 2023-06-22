@@ -4,8 +4,8 @@ import { Config } from './types/index.types';
 
 const conf: Config = {
   app: {
-    mongoURI: process.env.MONGO_URI ?? 'mongodb://root:root@mongo:27017/test' ?? 'mongodb://127.0.0.1:27017/test',
-    port: process.env.PORT || 8000,
+    mongoURI: 'mongodb://mongo:27017/test',
+    port: 3000,
   },
   publicKey: 'thisissuperpublickey',
   privateKey: 'thisisthesuperprivatekey',
