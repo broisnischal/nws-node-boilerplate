@@ -40,8 +40,7 @@ if (cluster.isPrimary) {
       server.close();
       process.exit(1);
     }
-
-    handleProcessEvent(server);
+    // cluster.fork();
   });
 } else {
   // triedRestart = 0;
