@@ -5,9 +5,11 @@ specifiers:
   '@aws-sdk/client-s3': ^3.354.0
   '@faker-js/faker': ^8.0.2
   '@socket.io/admin-ui': ^0.5.1
+  '@socket.io/redis-adapter': ^8.2.1
   '@types/bcrypt': ^5.0.0
   '@types/chai': ^4.3.5
   '@types/express': ^4.17.17
+  '@types/express-validator': ^3.0.0
   '@types/ip': ^1.1.0
   '@types/jest': ^29.5.2
   '@types/jsonwebtoken': ^9.0.2
@@ -94,6 +96,8 @@ specifiers:
   sharp: ^0.32.1
   shelljs: ^0.8.5
   socket.io: ^4.6.2
+  socket.io-adapter: ^2.5.2
+  socket.io-redis: ^6.1.1
   source-map-resolve: ^0.6.0
   supertest: ^6.3.3
   swagger-jsdoc: ^6.2.8
@@ -118,7 +122,9 @@ dependencies:
   '@aws-sdk/client-s3': 3.354.0
   '@faker-js/faker': 8.0.2
   '@socket.io/admin-ui': 0.5.1_socket.io@4.6.2
+  '@socket.io/redis-adapter': 8.2.1_socket.io-adapter@2.5.2
   '@types/express': 4.17.17
+  '@types/express-validator': 3.0.0
   address: 1.2.2
   amqplib: 0.10.3
   aws-sdk: 2.1401.0
@@ -179,6 +185,8 @@ dependencies:
   sharp: 0.32.1
   shelljs: 0.8.5
   socket.io: 4.6.2
+  socket.io-adapter: 2.5.2
+  socket.io-redis: 6.1.1
   source-map-resolve: 0.6.0
   swagger-jsdoc: 6.2.8_openapi-types@12.1.3
   swagger-ui-express: 4.6.3_express@4.18.2
@@ -2609,6 +2617,20 @@ packages:
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
     dev: false
 
+  /@socket.io/redis-adapter/8.2.1_socket.io-adapter@2.5.2:
+    resolution: {integrity: sha512-6Dt7EZgGSBP0qvXeOKGx7NnSr2tPMbVDfDyL97zerZo+v69hMfL99skMCL3RKZlWVqLyRme2T0wcy3udHhtOsg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      socket.io-adapter: ^2.4.0
+    dependencies:
+      debug: 4.3.4
+      notepack.io: 3.0.1
+      socket.io-adapter: 2.5.2
+      uid2: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@tsconfig/node10/1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==}
     dev: true
@@ -2702,6 +2724,13 @@ packages:
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
       '@types/send': 0.17.1
+    dev: false
+
+  /@types/express-validator/3.0.0:
+    resolution: {integrity: sha512-LusnB0YhTXpBT25PXyGPQlK7leE1e41Vezq1hHEUwjfkopM1Pkv2X2Ppxqh9c+w/HZ6Udzki8AJotKNjDTGdkQ==}
+    deprecated: This is a stub types definition for express-validator (https://github.com/ctavan/express-validator). express-validator provides its own type definitions, so you don't need @types/express-validator installed!
+    dependencies:
+      express-validator: 7.0.1
     dev: false
 
   /@types/express/4.17.17:
@@ -4689,6 +4718,11 @@ packages:
 
   /delegates/1.0.0:
     resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==}
+    dev: false
+
+  /denque/1.5.1:
+    resolution: {integrity: sha512-XwE+iZ4D6ZUB7mfYRMb5wByE8L74HCn30FBN7sWnXksWc1LO1bPDl67pBR9o/kC4z/xSNAwkMYcGgqDV3BE3Hw==}
+    engines: {node: '>=0.10'}
     dev: false
 
   /depd/1.1.2:
@@ -8762,6 +8796,14 @@ packages:
     engines: {node: '>=14.16'}
     dev: false
 
+  /notepack.io/2.2.0:
+    resolution: {integrity: sha512-9b5w3t5VSH6ZPosoYnyDONnUTF8o0UkBw7JLA6eBlYJWyGT1Q3vQa8Hmuj1/X6RYvHjjygBDgw6fJhe0JEojfw==}
+    dev: false
+
+  /notepack.io/3.0.1:
+    resolution: {integrity: sha512-TKC/8zH5pXIAMVQio2TvVDTtPRX+DJPHDqjRbxogtFiByHyzKmy96RA0JtCQJ+WouyyL4A10xomQzgbUT+1jCg==}
+    dev: false
+
   /npm-run-path/2.0.2:
     resolution: {integrity: sha512-lJxZYlT4DW/bRUtFh1MQIWqmLwQfAxnqWG4HhEdjMlkrJYnJn0Jrr2u3mgxqaWsdiBc76TYkTG/mhrnYTuzfHw==}
     engines: {node: '>=4'}
@@ -9792,6 +9834,32 @@ packages:
       esprima: 4.0.1
     dev: false
 
+  /redis-commands/1.7.0:
+    resolution: {integrity: sha512-nJWqw3bTFy21hX/CPKHth6sfhZbdiHP6bTawSgQBlKOVRG7EZkfHbbHwQJnrE4vsQf0CMNE+3gJ4Fmm16vdVlQ==}
+    dev: false
+
+  /redis-errors/1.2.0:
+    resolution: {integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /redis-parser/3.0.0:
+    resolution: {integrity: sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==}
+    engines: {node: '>=4'}
+    dependencies:
+      redis-errors: 1.2.0
+    dev: false
+
+  /redis/3.1.2:
+    resolution: {integrity: sha512-grn5KoZLr/qrRQVwoSkmzdbw6pwF+/rwODtrOr6vuBRiR/f3rjSTGupbF90Zpqm2oenix8Do6RV7pYEkGwlKkw==}
+    engines: {node: '>=10'}
+    dependencies:
+      denque: 1.5.1
+      redis-commands: 1.7.0
+      redis-errors: 1.2.0
+      redis-parser: 3.0.0
+    dev: false
+
   /redis/4.6.7:
     resolution: {integrity: sha512-KrkuNJNpCwRm5vFJh0tteMxW8SaUzkm5fBH7eL5hd/D0fAkzvapxbfGPP/r+4JAXdQuX7nebsBkBqA2RHB7Usw==}
     dependencies:
@@ -10357,6 +10425,10 @@ packages:
       hoek: 0.9.1
     dev: false
 
+  /socket.io-adapter/2.2.0:
+    resolution: {integrity: sha512-rG49L+FwaVEwuAdeBRq49M97YI3ElVabJPzvHT9S6a2CWhDKnjSFasvwAwSYPRhQzfn4NtDIbCaGYgOCOU/rlg==}
+    dev: false
+
   /socket.io-adapter/2.5.2:
     resolution: {integrity: sha512-87C3LO/NOMc+eMcpcxUBebGjkpMDkNBS9tf7KJqcDsmL936EChtVva71Dw2q4tQcuVC+hAUy4an2NO/sYXmwRA==}
     dependencies:
@@ -10372,6 +10444,20 @@ packages:
     dependencies:
       '@socket.io/component-emitter': 3.1.0
       debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /socket.io-redis/6.1.1:
+    resolution: {integrity: sha512-jeaXe3TGKC20GMSlPHEdwTUIWUpay/L7m5+S9TQcOf22p9Llx44/RkpJV08+buXTZ8E+aivOotj2RdeFJJWJJQ==}
+    engines: {node: '>=10.0.0'}
+    deprecated: 'This package has been renamed to ''@socket.io/redis-adapter'', please see the migration guide here: https://socket.io/docs/v4/redis-adapter/#migrating-from-socketio-redis'
+    dependencies:
+      debug: 4.3.4
+      notepack.io: 2.2.0
+      redis: 3.1.2
+      socket.io-adapter: 2.2.0
+      uid2: 0.0.3
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -11272,6 +11358,15 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       random-bytes: 1.0.0
+    dev: false
+
+  /uid2/0.0.3:
+    resolution: {integrity: sha512-5gSP1liv10Gjp8cMEnFd6shzkL/D6W1uhXSFNCxDC+YI8+L8wkCYCbJ7n77Ezb4wE/xzMogecE+DtamEe9PZjg==}
+    dev: false
+
+  /uid2/1.0.0:
+    resolution: {integrity: sha512-+I6aJUv63YAcY9n4mQreLUt0d4lvwkkopDNmpomkAUz0fAkEMV9pRWxN0EjhW1YfRhcuyHg2v3mwddCDW1+LFQ==}
+    engines: {node: '>= 4.0.0'}
     dev: false
 
   /unbox-primitive/1.0.2:

@@ -3,3 +3,5 @@ ni address compression @socket.io/admin-ui http-errors log-update amqplib axios 
 
 
  ni address compression @socket.io/admin-ui http-errors log-update amqplib axios bcryptjs cors dayjs moment-timezone moment express-joi-validation express-mongo-sanitize express-rate-limit express-session express-validator geoip-lite helmet hpp http-proxy-middleware i18next lusca jsonwebtoken multer multer-s3 node-cache node-cron uuid redis xss-clean uuidv4 sharp cookie-parser express-flash express-healthcheck
+
+ reflect-metadata

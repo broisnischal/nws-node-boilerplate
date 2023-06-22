@@ -8,7 +8,7 @@ const connectDB = async (URI?: string): Promise<void> => {
     logger.info(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error: any) {
     logger.error(`Error:", ${error.message}`);
-    // console.log(error);
+    console.log(error);
     process.exit(1);
   }
 };
