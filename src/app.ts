@@ -2,6 +2,7 @@ import os from 'node:os';
 import express, { Application, NextFunction, Request, Response } from 'express';
 import sanitizeInput from '@/helpers/sanitize';
 import logger from '@/log/logger';
+// import cluster from 'node:cluster';
 import errorHandler from '@/utils/errorHandler';
 import CreateError from './utils/customError';
 import { Code } from './enum/v1/code.enum';
@@ -38,6 +39,8 @@ app.get('/', (req: Request, res: Response) => {
     xRealIP,
     xForwardedFor,
   });
+
+  // cluster.worker?.kill();
 });
 
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars

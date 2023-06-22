@@ -40,8 +40,11 @@ if (cluster.isPrimary) {
       server.close();
       process.exit(1);
     }
+
+    handleProcessEvent(server);
   });
 } else {
+  // triedRestart = 0;
   server.listen(conf.app.port, () => {
     logger.info(`Listening on port ${conf.app.port} on process id: ${process.pid}`);
   });
