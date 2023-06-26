@@ -44,12 +44,12 @@ if (cluster.isPrimary) {
   });
 } else {
   // triedRestart = 0;
-  server.listen(conf.app.port, () => {
+  server.listen(conf.app.port, async () => {
     logger.info(`Listening on port ${conf.app.port} on process id: ${process.pid}`);
+    io = startSocketServer(server);
+    handleProcessEvent(server);
+    startMetricsServer();
   });
-  io = startSocketServer(server);
-  handleProcessEvent(server);
-  startMetricsServer();
 }
 
 export { io, server };
