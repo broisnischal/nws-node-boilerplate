@@ -7,6 +7,7 @@ import errorHandler from '@/utils/errorHandler';
 import CreateError from './utils/customError';
 import { Code } from './enum/v1/code.enum';
 import connectDB from './config/mongoose.config';
+// import conf from './config.default';
 
 const app: Application = express();
 

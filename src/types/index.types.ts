@@ -41,6 +41,7 @@ export type SocketCorsOptions = {
 
 export type AppConfig = {
   mongoURI: string;
+  localMongo: string;
   port: string | number;
 };
 

@@ -5,6 +5,7 @@ import { Config } from './types/index.types';
 const conf: Config = {
   app: {
     mongoURI: 'mongodb://mongo:27017/test',
+    localMongo: 'mongodb://127.0.0.1/test',
     port: 3000,
   },
   publicKey: 'thisissuperpublickey',

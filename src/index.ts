@@ -10,6 +10,7 @@ import os from 'node:os';
 import http from 'node:http';
 import conf from './config.default';
 import startSocketServer from './socket/configure.socket';
+import { startMetricsServer } from './utils/merits';
 
 dotenv.config();
 
@@ -40,7 +41,6 @@ if (cluster.isPrimary) {
       server.close();
       process.exit(1);
     }
-    // cluster.fork();
   });
 } else {
   // triedRestart = 0;
@@ -49,6 +49,7 @@ if (cluster.isPrimary) {
   });
   io = startSocketServer(server);
   handleProcessEvent(server);
+  startMetricsServer();
 }
 
 export { io, server };
