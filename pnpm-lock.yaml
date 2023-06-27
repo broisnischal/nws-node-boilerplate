@@ -10,6 +10,8 @@ specifiers:
   '@types/chai': ^4.3.5
   '@types/express': ^4.17.17
   '@types/express-validator': ^3.0.0
+  '@types/geoip-lite': ^1.4.1
+  '@types/google-libphonenumber': ^7.4.23
   '@types/ip': ^1.1.0
   '@types/jest': ^29.5.2
   '@types/jsonwebtoken': ^9.0.2
@@ -18,6 +20,7 @@ specifiers:
   '@types/node': ^20.3.1
   '@types/node-cron': ^3.0.7
   '@types/supertest': ^2.0.12
+  '@types/ua-parser-js': ^0.7.36
   '@types/unidecode': ^0.1.1
   '@typescript-eslint/eslint-plugin': ^5.60.0
   '@typescript-eslint/parser': ^5.60.0
@@ -52,6 +55,7 @@ specifiers:
   express-session: ^1.17.3
   express-validator: ^7.0.1
   geoip-lite: ^1.4.7
+  google-libphonenumber: ^3.2.32
   helmet: ^7.0.0
   hpp: ^0.2.3
   http-errors: ^2.0.0
@@ -96,6 +100,7 @@ specifiers:
   semantic-release: ^21.0.5
   sharp: ^0.32.1
   shelljs: ^0.8.5
+  slugify: ^1.6.6
   socket.io: ^4.6.2
   socket.io-adapter: ^2.5.2
   socket.io-redis: ^6.1.1
@@ -111,6 +116,7 @@ specifiers:
   tscpaths: ^0.0.9
   twilio: ^4.12.0
   typescript: ^5.1.3
+  ua-parser-js: ^1.0.35
   unidecode: ^0.1.8
   uninstall: ^0.0.0
   urix: ^0.1.0
@@ -127,6 +133,9 @@ dependencies:
   '@socket.io/redis-adapter': 8.2.1_socket.io-adapter@2.5.2
   '@types/express': 4.17.17
   '@types/express-validator': 3.0.0
+  '@types/geoip-lite': 1.4.1
+  '@types/google-libphonenumber': 7.4.23
+  '@types/ua-parser-js': 0.7.36
   address: 1.2.2
   amqplib: 0.10.3
   aws-sdk: 2.1401.0
@@ -150,6 +159,7 @@ dependencies:
   express-session: 1.17.3
   express-validator: 7.0.1
   geoip-lite: 1.4.7
+  google-libphonenumber: 3.2.32
   helmet: 7.0.0
   hpp: 0.2.3
   http-errors: 2.0.0
@@ -187,6 +197,7 @@ dependencies:
   semantic-release: 21.0.5
   sharp: 0.32.1
   shelljs: 0.8.5
+  slugify: 1.6.6
   socket.io: 4.6.2
   socket.io-adapter: 2.5.2
   socket.io-redis: 6.1.1
@@ -194,6 +205,7 @@ dependencies:
   swagger-jsdoc: 6.2.8_openapi-types@12.1.3
   swagger-ui-express: 4.6.3_express@4.18.2
   twilio: 4.12.0
+  ua-parser-js: 1.0.35
   unidecode: 0.1.8
   uninstall: 0.0.0
   urix: 0.1.0
@@ -2746,12 +2758,20 @@ packages:
       '@types/serve-static': 1.15.1
     dev: false
 
+  /@types/geoip-lite/1.4.1:
+    resolution: {integrity: sha512-qHH5eF3rL1wwqpzdsgMdgskfdWXxxQvJb9POJ66NK7/1l3QXsqHLpIheh9OmhtqZ2CF7AmN0sA2R4PgW8JSm7w==}
+    dev: false
+
   /@types/glob/7.2.0:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
       '@types/node': 20.3.1
     dev: true
+
+  /@types/google-libphonenumber/7.4.23:
+    resolution: {integrity: sha512-C3ydakLTQa8HxtYf9ge4q6uT9krDX8smSIxmmW3oACFi5g5vv6T068PRExF7UyWbWpuYiDG8Nm24q2X5XhcZWw==}
+    dev: false
 
   /@types/graceful-fs/4.1.6:
     resolution: {integrity: sha512-Sig0SNORX9fdW+bQuTEovKj3uHcUL6LQKbCrrqb1X7J6/ReAbhCXRAhc+SMejhLELFj2QcyuxmUooZ4bt5ReSw==}
@@ -2909,6 +2929,10 @@ packages:
 
   /@types/triple-beam/1.3.2:
     resolution: {integrity: sha512-txGIh+0eDFzKGC25zORnswy+br1Ha7hj5cMVwKIU7+s0U2AxxJru/jZSMU6OC9MJWP6+pc/hc6ZjyZShpsyY2g==}
+    dev: false
+
+  /@types/ua-parser-js/0.7.36:
+    resolution: {integrity: sha512-N1rW+njavs70y2cApeIw1vLMYXRwfBy+7trgavGuuTfOd7j1Yh7QTRc/yqsPl6ncokt72ZXuxEU0PiCp9bSwNQ==}
     dev: false
 
   /@types/unidecode/0.1.1:
@@ -6278,6 +6302,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /google-libphonenumber/3.2.32:
+    resolution: {integrity: sha512-mcNgakausov/B/eTgVeX8qc8IwWjRrupk9UzZZ/QDEvdh5fAjE7Aa211bkZpZj42zKkeS6MTT8avHUwjcLxuGQ==}
+    engines: {node: '>=0.10'}
+    dev: false
 
   /gopd/1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
@@ -10395,6 +10424,11 @@ packages:
     resolution: {integrity: sha512-4qdtOGcBjral6YIBCWJ0ljFSKNLz9KkhbWtuGvUyRowl1kxfuE1x/Z/aJcaiilpb3do9bl5K7/1h9XC5wWpY/A==}
     dev: false
 
+  /slugify/1.6.6:
+    resolution: {integrity: sha512-h+z7HKHYXj6wJU+AnS/+IH8Uh9fdcX1Lrhg1/VMdf9PwoBQXFcXiAdsy2tSK0P6gKwJLXp02r90ahUCqHk9rrw==}
+    engines: {node: '>=8.0.0'}
+    dev: false
+
   /smart-buffer/4.2.0:
     resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
@@ -11361,6 +11395,10 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
+
+  /ua-parser-js/1.0.35:
+    resolution: {integrity: sha512-fKnGuqmTBnIE+/KXSzCn4db8RTigUzw1AN0DmdU6hJovUTbYJKyqj+8Mt1c4VfRDnOVJnENmfYkIPZ946UrSAA==}
+    dev: false
 
   /uc.micro/1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}

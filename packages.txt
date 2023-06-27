@@ -1,0 +1,131 @@
+tsfinal@1.0.0 /home/nees/tsfinal
+├── @aws-sdk/abort-controller@3.347.0 -> ./node_modules/.pnpm/@aws-sdk+abort-controller@3.347.0/node_modules/@aws-sdk/abort-controller
+├── @aws-sdk/client-s3@3.354.0 -> ./node_modules/.pnpm/@aws-sdk+client-s3@3.354.0/node_modules/@aws-sdk/client-s3
+├── @eslint-community/eslint-utils@4.4.0 extraneous -> ./node_modules/.pnpm/@eslint-community+eslint-utils@4.4.0_eslint@8.43.0/node_modules/@eslint-community/eslint-utils
+├── @eslint-community/regexpp@4.5.1 extraneous -> ./node_modules/.pnpm/@eslint-community+regexpp@4.5.1/node_modules/@eslint-community/regexpp
+├── @eslint/eslintrc@2.0.3 extraneous -> ./node_modules/.pnpm/@eslint+eslintrc@2.0.3/node_modules/@eslint/eslintrc
+├── @eslint/js@8.43.0 extraneous -> ./node_modules/.pnpm/@eslint+js@8.43.0/node_modules/@eslint/js
+├── @faker-js/faker@8.0.2 -> ./node_modules/.pnpm/@faker-js+faker@8.0.2/node_modules/@faker-js/faker
+├── @socket.io/admin-ui@0.5.1 -> ./node_modules/.pnpm/@socket.io+admin-ui@0.5.1_socket.io@4.6.2/node_modules/@socket.io/admin-ui
+├── @socket.io/redis-adapter@8.2.1 -> ./node_modules/.pnpm/@socket.io+redis-adapter@8.2.1_socket.io-adapter@2.5.2/node_modules/@socket.io/redis-adapter
+├── @types/bcrypt@5.0.0 -> ./node_modules/.pnpm/@types+bcrypt@5.0.0/node_modules/@types/bcrypt
+├── @types/chai@4.3.5 -> ./node_modules/.pnpm/@types+chai@4.3.5/node_modules/@types/chai
+├── @types/express-validator@3.0.0 -> ./node_modules/.pnpm/@types+express-validator@3.0.0/node_modules/@types/express-validator
+├── @types/express@4.17.17 -> ./node_modules/.pnpm/@types+express@4.17.17/node_modules/@types/express
+├── @types/ip@1.1.0 -> ./node_modules/.pnpm/@types+ip@1.1.0/node_modules/@types/ip
+├── @types/jest@29.5.2 -> ./node_modules/.pnpm/@types+jest@29.5.2/node_modules/@types/jest
+├── @types/jsonwebtoken@9.0.2 -> ./node_modules/.pnpm/@types+jsonwebtoken@9.0.2/node_modules/@types/jsonwebtoken
+├── @types/marked@5.0.0 -> ./node_modules/.pnpm/@types+marked@5.0.0/node_modules/@types/marked
+├── @types/mocha@10.0.1 -> ./node_modules/.pnpm/@types+mocha@10.0.1/node_modules/@types/mocha
+├── @types/node-cron@3.0.7 -> ./node_modules/.pnpm/@types+node-cron@3.0.7/node_modules/@types/node-cron
+├── @types/node@20.3.1 -> ./node_modules/.pnpm/@types+node@20.3.1/node_modules/@types/node
+├── @types/supertest@2.0.12 -> ./node_modules/.pnpm/@types+supertest@2.0.12/node_modules/@types/supertest
+├── @types/unidecode@0.1.1 -> ./node_modules/.pnpm/@types+unidecode@0.1.1/node_modules/@types/unidecode
+├── @typescript-eslint/eslint-plugin@5.60.0 -> ./node_modules/.pnpm/@typescript-eslint+eslint-plugin@5.60.0_6yzi2ymi2jevhjfd3hf6w262e4/node_modules/@typescript-eslint/eslint-plugin
+├── @typescript-eslint/parser@5.60.0 -> ./node_modules/.pnpm/@typescript-eslint+parser@5.60.0_7yfldhli4vs6yywnkyiujhawka/node_modules/@typescript-eslint/parser
+├── @typescript-eslint/scope-manager@5.60.0 extraneous -> ./node_modules/.pnpm/@typescript-eslint+scope-manager@5.60.0/node_modules/@typescript-eslint/scope-manager
+├── @typescript-eslint/type-utils@5.60.0 extraneous -> ./node_modules/.pnpm/@typescript-eslint+type-utils@5.60.0_7yfldhli4vs6yywnkyiujhawka/node_modules/@typescript-eslint/type-utils
+├── @typescript-eslint/types@5.60.0 extraneous -> ./node_modules/.pnpm/@typescript-eslint+types@5.60.0/node_modules/@typescript-eslint/types
+├── @typescript-eslint/visitor-keys@5.60.0 extraneous -> ./node_modules/.pnpm/@typescript-eslint+visitor-keys@5.60.0/node_modules/@typescript-eslint/visitor-keys
+├── address@1.2.2 -> ./node_modules/.pnpm/address@1.2.2/node_modules/address
+├── amqplib@0.10.3 -> ./node_modules/.pnpm/amqplib@0.10.3/node_modules/amqplib
+├── aws-sdk@2.1401.0 -> ./node_modules/.pnpm/aws-sdk@2.1401.0/node_modules/aws-sdk
+├── axios@1.4.0 -> ./node_modules/.pnpm/axios@1.4.0/node_modules/axios
+├── bcrypt@5.1.0 -> ./node_modules/.pnpm/bcrypt@5.1.0/node_modules/bcrypt
+├── bcryptjs@2.4.3 -> ./node_modules/.pnpm/bcryptjs@2.4.3/node_modules/bcryptjs
+├── chai-http@4.4.0 -> ./node_modules/.pnpm/chai-http@4.4.0/node_modules/chai-http
+├── chai@4.3.7 -> ./node_modules/.pnpm/chai@4.3.7/node_modules/chai
+├── child_process@1.0.2 -> ./node_modules/.pnpm/child_process@1.0.2/node_modules/child_process
+├── compression@1.7.4 -> ./node_modules/.pnpm/compression@1.7.4/node_modules/compression
+├── concurrently@8.2.0 -> ./node_modules/.pnpm/concurrently@8.2.0/node_modules/concurrently
+├── cookie-parser@1.4.6 -> ./node_modules/.pnpm/cookie-parser@1.4.6/node_modules/cookie-parser
+├── cors@2.8.5 -> ./node_modules/.pnpm/cors@2.8.5/node_modules/cors
+├── dayjs@1.11.8 -> ./node_modules/.pnpm/dayjs@1.11.8/node_modules/dayjs
+├── dotenv@16.3.1 -> ./node_modules/.pnpm/dotenv@16.3.1/node_modules/dotenv
+├── email-templates@11.1.1 -> ./node_modules/.pnpm/email-templates@11.1.1/node_modules/email-templates
+├── eslint-config-airbnb-base@15.0.0 -> ./node_modules/.pnpm/eslint-config-airbnb-base@15.0.0_reondqha3k2utzsghz7hyp2koq/node_modules/eslint-config-airbnb-base
+├── eslint-config-prettier@8.8.0 -> ./node_modules/.pnpm/eslint-config-prettier@8.8.0_eslint@8.43.0/node_modules/eslint-config-prettier
+├── eslint-import-resolver-typescript@3.5.5 -> ./node_modules/.pnpm/eslint-import-resolver-typescript@3.5.5_we7oiee66slfl766qnqeeom2uy/node_modules/eslint-import-resolver-typescript
+├── eslint-module-utils@2.8.0 extraneous -> ./node_modules/.pnpm/eslint-module-utils@2.8.0_q6n4qjy5s5cojc7nzxtbxjdhkq/node_modules/eslint-module-utils
+├── eslint-plugin-import@2.27.5 -> ./node_modules/.pnpm/eslint-plugin-import@2.27.5_q6n4qjy5s5cojc7nzxtbxjdhkq/node_modules/eslint-plugin-import
+├── eslint-plugin-prettier@4.2.1 -> ./node_modules/.pnpm/eslint-plugin-prettier@4.2.1_zh6vkmzat4wtnmvmftdassiwyu/node_modules/eslint-plugin-prettier
+├── eslint-scope@7.2.0 extraneous -> ./node_modules/.pnpm/eslint-scope@7.2.0/node_modules/eslint-scope
+├── eslint@8.43.0 -> ./node_modules/.pnpm/eslint@8.43.0/node_modules/eslint
+├── express-flash@0.0.2 -> ./node_modules/.pnpm/express-flash@0.0.2/node_modules/express-flash
+├── express-healthcheck@0.1.0 -> ./node_modules/.pnpm/express-healthcheck@0.1.0/node_modules/express-healthcheck
+├── express-joi-validation@5.0.1 -> ./node_modules/.pnpm/express-joi-validation@5.0.1_joi@17.9.2/node_modules/express-joi-validation
+├── express-mongo-sanitize@2.2.0 -> ./node_modules/.pnpm/express-mongo-sanitize@2.2.0/node_modules/express-mongo-sanitize
+├── express-rate-limit@6.7.0 -> ./node_modules/.pnpm/express-rate-limit@6.7.0_express@4.18.2/node_modules/express-rate-limit
+├── express-session@1.17.3 -> ./node_modules/.pnpm/express-session@1.17.3/node_modules/express-session
+├── express-validator@7.0.1 -> ./node_modules/.pnpm/express-validator@7.0.1/node_modules/express-validator
+├── express@4.18.2 -> ./node_modules/.pnpm/express@4.18.2/node_modules/express
+├── geoip-lite@1.4.7 -> ./node_modules/.pnpm/geoip-lite@1.4.7/node_modules/geoip-lite
+├── helmet@7.0.0 -> ./node_modules/.pnpm/helmet@7.0.0/node_modules/helmet
+├── hpp@0.2.3 -> ./node_modules/.pnpm/hpp@0.2.3/node_modules/hpp
+├── http-errors@2.0.0 -> ./node_modules/.pnpm/http-errors@2.0.0/node_modules/http-errors
+├── http-proxy-middleware@2.0.6 -> ./node_modules/.pnpm/http-proxy-middleware@2.0.6_@types+express@4.17.17/node_modules/http-proxy-middleware
+├── hugo@0.0.3 -> ./node_modules/.pnpm/hugo@0.0.3/node_modules/hugo
+├── husky@8.0.3 -> ./node_modules/.pnpm/husky@8.0.3/node_modules/husky
+├── i18next@23.2.1 -> ./node_modules/.pnpm/i18next@23.2.1/node_modules/i18next
+├── ip@1.1.8 -> ./node_modules/.pnpm/ip@1.1.8/node_modules/ip
+├── jest@29.5.0 -> ./node_modules/.pnpm/jest@29.5.0_g4pn5de5b5vzxaw7qqi4hu53kq/node_modules/jest
+├── joi@17.9.2 -> ./node_modules/.pnpm/joi@17.9.2/node_modules/joi
+├── jsonlint@1.6.3 -> ./node_modules/.pnpm/jsonlint@1.6.3/node_modules/jsonlint
+├── jsonwebtoken@9.0.0 -> ./node_modules/.pnpm/jsonwebtoken@9.0.0/node_modules/jsonwebtoken
+├── jwks-rsa@3.0.1 -> ./node_modules/.pnpm/jwks-rsa@3.0.1/node_modules/jwks-rsa
+├── lint-staged@13.2.2 -> ./node_modules/.pnpm/lint-staged@13.2.2/node_modules/lint-staged
+├── loadsh@0.0.4 -> ./node_modules/.pnpm/loadsh@0.0.4/node_modules/loadsh
+├── log-update@5.0.1 -> ./node_modules/.pnpm/log-update@5.0.1/node_modules/log-update
+├── lusca@1.7.0 -> ./node_modules/.pnpm/lusca@1.7.0/node_modules/lusca
+├── marked@5.1.0 -> ./node_modules/.pnpm/marked@5.1.0/node_modules/marked
+├── mocha@10.2.0 -> ./node_modules/.pnpm/mocha@10.2.0/node_modules/mocha
+├── moment-timezone@0.5.43 -> ./node_modules/.pnpm/moment-timezone@0.5.43/node_modules/moment-timezone
+├── moment@2.29.4 -> ./node_modules/.pnpm/moment@2.29.4/node_modules/moment
+├── mongoose-to-swagger@1.4.0 -> ./node_modules/.pnpm/mongoose-to-swagger@1.4.0/node_modules/mongoose-to-swagger
+├── mongoose@7.3.0 -> ./node_modules/.pnpm/mongoose@7.3.0/node_modules/mongoose
+├── morgan@1.10.0 -> ./node_modules/.pnpm/morgan@1.10.0/node_modules/morgan
+├── multer-s3@3.0.1 -> ./node_modules/.pnpm/multer-s3@3.0.1_ljwqudw2rn5qzizyjywtpbgct4/node_modules/multer-s3
+├── multer@1.4.5-lts.1 -> ./node_modules/.pnpm/multer@1.4.5-lts.1/node_modules/multer
+├── nanoid@4.0.2 -> ./node_modules/.pnpm/nanoid@4.0.2/node_modules/nanoid
+├── node-cache@5.1.2 -> ./node_modules/.pnpm/node-cache@5.1.2/node_modules/node-cache
+├── node-cron@3.0.2 -> ./node_modules/.pnpm/node-cron@3.0.2/node_modules/node-cron
+├── nodemailer@6.9.3 -> ./node_modules/.pnpm/nodemailer@6.9.3/node_modules/nodemailer
+├── nomnom@1.8.1 -> ./node_modules/.pnpm/nomnom@1.8.1/node_modules/nomnom
+├── nyc@15.1.0 -> ./node_modules/.pnpm/nyc@15.1.0/node_modules/nyc
+├── openai@3.3.0 -> ./node_modules/.pnpm/openai@3.3.0/node_modules/openai
+├── openapi-types@12.1.3 -> ./node_modules/.pnpm/openapi-types@12.1.3/node_modules/openapi-types
+├── prettier-linter-helpers@1.0.0 extraneous -> ./node_modules/.pnpm/prettier-linter-helpers@1.0.0/node_modules/prettier-linter-helpers
+├── prettier@2.8.8 -> ./node_modules/.pnpm/prettier@2.8.8/node_modules/prettier
+├── prom-client@14.2.0 -> ./node_modules/.pnpm/prom-client@14.2.0/node_modules/prom-client
+├── punycode@2.3.0 -> ./node_modules/.pnpm/punycode@2.3.0/node_modules/punycode
+├── querystring@0.2.1 -> ./node_modules/.pnpm/querystring@0.2.1/node_modules/querystring
+├── redis@4.6.7 -> ./node_modules/.pnpm/redis@4.6.7/node_modules/redis
+├── resolve-url@0.2.1 -> ./node_modules/.pnpm/resolve-url@0.2.1/node_modules/resolve-url
+├── response-time@2.3.2 -> ./node_modules/.pnpm/response-time@2.3.2/node_modules/response-time
+├── semantic-release@21.0.5 -> ./node_modules/.pnpm/semantic-release@21.0.5/node_modules/semantic-release
+├── sharp@0.32.1 -> ./node_modules/.pnpm/sharp@0.32.1/node_modules/sharp
+├── shelljs@0.8.5 -> ./node_modules/.pnpm/shelljs@0.8.5/node_modules/shelljs
+├── slugify@1.6.6 -> ./node_modules/.pnpm/slugify@1.6.6/node_modules/slugify
+├── socket.io-adapter@2.5.2 -> ./node_modules/.pnpm/socket.io-adapter@2.5.2/node_modules/socket.io-adapter
+├── socket.io-redis@6.1.1 -> ./node_modules/.pnpm/socket.io-redis@6.1.1/node_modules/socket.io-redis
+├── socket.io@4.6.2 -> ./node_modules/.pnpm/socket.io@4.6.2/node_modules/socket.io
+├── source-map-resolve@0.6.0 -> ./node_modules/.pnpm/source-map-resolve@0.6.0/node_modules/source-map-resolve
+├── supertest@6.3.3 -> ./node_modules/.pnpm/supertest@6.3.3/node_modules/supertest
+├── swagger-jsdoc@6.2.8 -> ./node_modules/.pnpm/swagger-jsdoc@6.2.8_openapi-types@12.1.3/node_modules/swagger-jsdoc
+├── swagger-ui-express@4.6.3 -> ./node_modules/.pnpm/swagger-ui-express@4.6.3_express@4.18.2/node_modules/swagger-ui-express
+├── ts-jest@29.1.0 -> ./node_modules/.pnpm/ts-jest@29.1.0_z37sxruc2skk43266hpw7mx3im/node_modules/ts-jest
+├── ts-node-dev@2.0.0 -> ./node_modules/.pnpm/ts-node-dev@2.0.0_hqy5jyg3mtmsx53qop37hf36vu/node_modules/ts-node-dev
+├── ts-node@10.9.1 -> ./node_modules/.pnpm/ts-node@10.9.1_hqy5jyg3mtmsx53qop37hf36vu/node_modules/ts-node
+├── tsconfig-paths-webpack-plugin@4.0.1 -> ./node_modules/.pnpm/tsconfig-paths-webpack-plugin@4.0.1/node_modules/tsconfig-paths-webpack-plugin
+├── tsconfig-paths@4.2.0 -> ./node_modules/.pnpm/tsconfig-paths@4.2.0/node_modules/tsconfig-paths
+├── tscpaths@0.0.9 -> ./node_modules/.pnpm/tscpaths@0.0.9/node_modules/tscpaths
+├── twilio@4.12.0 -> ./node_modules/.pnpm/twilio@4.12.0/node_modules/twilio
+├── typescript@5.1.3 -> ./node_modules/.pnpm/typescript@5.1.3/node_modules/typescript
+├── unidecode@0.1.8 -> ./node_modules/.pnpm/unidecode@0.1.8/node_modules/unidecode
+├── uninstall@0.0.0 -> ./node_modules/.pnpm/uninstall@0.0.0/node_modules/uninstall
+├── urix@0.1.0 -> ./node_modules/.pnpm/urix@0.1.0/node_modules/urix
+├── uuid@9.0.0 -> ./node_modules/.pnpm/uuid@9.0.0/node_modules/uuid
+├── uuidv4@6.2.13 -> ./node_modules/.pnpm/uuidv4@6.2.13/node_modules/uuidv4
+├── winston@3.9.0 -> ./node_modules/.pnpm/winston@3.9.0/node_modules/winston
+└── zod@3.21.4 -> ./node_modules/.pnpm/zod@3.21.4/node_modules/zod
+

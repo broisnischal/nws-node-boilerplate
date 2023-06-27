@@ -1,4 +1,4 @@
-import log from '@/log/logger';
+// import log from '@/log/logger';
 import express, { Request, Response } from 'express';
 import client, { Histogram } from 'prom-client';
 
@@ -28,6 +28,6 @@ export function startMetricsServer(port = 9100, endpoint = '/metrics'): void {
   });
 
   app.listen(port, () => {
-    log.info(`Metrics server started at http://localhost:${port}`);
+    // log.info(`Metrics server started at http://localhost:${port}`);
   });
 }

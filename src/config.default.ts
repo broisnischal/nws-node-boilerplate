@@ -6,6 +6,7 @@ const conf: Config = {
   app: {
     mongoURI: 'mongodb://mongo:27017/test',
     localMongo: 'mongodb://127.0.0.1/test',
+    remoteMongo: 'mongodb+srv://nees:nees@aitc.buicugl.mongodb.net/upkeep?retryWrites=true&w=majority',
     port: 3000,
   },
   publicKey: 'thisissuperpublickey',

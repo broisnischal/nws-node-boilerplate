@@ -26,6 +26,10 @@ class UserModel extends Model<IUser> {
   myMethod(this: IUser) {
     return 42;
   }
+
+  async comparePassword(password: string): Promise<boolean> {
+    return !!(await bcrypt.compare(password, this.password));
+  }
 }
 
 userSchema.loadClass(UserModel);

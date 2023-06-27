@@ -45,12 +45,17 @@ if (cluster.isPrimary) {
 } else {
   // triedRestart = 0;
   server.listen(conf.app.port, async () => {
-    logger.info(`Listening on port ${conf.app.port} on process id: ${process.pid}`);
     io = startSocketServer(server);
-    handleProcessEvent(server);
     startMetricsServer();
   });
+
+  server.once('close', () => {
+    io?.close();
+    logger.info('Server closed gracefully');
+  });
 }
+
+handleProcessEvent(server);
 
 export { io, server };
 // export const io: Server = startSocketServer(server);

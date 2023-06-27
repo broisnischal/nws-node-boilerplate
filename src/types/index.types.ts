@@ -17,6 +17,9 @@ export type DecryptionFunction<T> = (encryptedId: string, privateKey?: string) =
 
 export type ErrorType = 'General' | 'Raw' | 'Validation' | 'Unauthorized';
 
+export type Role = 'User' | 'Admin' | 'Merchant' | 'Agent';
+export type Token = 'forgot' | 'reset' | 'change' | 'verify';
+
 export type ErrorValidation = { [key: string]: string };
 
 export type ErrorResponse = {
@@ -42,6 +45,7 @@ export type SocketCorsOptions = {
 export type AppConfig = {
   mongoURI: string;
   localMongo: string;
+  remoteMongo: string;
   port: string | number;
 };
 
