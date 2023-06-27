@@ -1,5 +1,7 @@
+// import { Code } from '@/enum/v1/code.enum';
+// import CreateError from '@/utils/customError';
 import { NextFunction, Request, Response } from 'express';
-import { validationResult, ValidationError } from 'express-validator';
+import { validationResult } from 'express-validator';
 
 const validate = (req: Request, res: Response, next: NextFunction): unknown => {
   const errors = validationResult(req);
@@ -8,17 +10,17 @@ const validate = (req: Request, res: Response, next: NextFunction): unknown => {
     return next();
   }
 
-  const extractedErrors: { [key: string]: string }[] = [];
-  errors.array().map((err: ValidationError) => extractedErrors.push({ [err.type]: err.msg }));
-
-  // throw new APPError("Validation failed", 422, extractedErrors);
+  const extractedErrors: any = [];
+  errors.array().map((err: any) => extractedErrors.push({ [err.path]: err.msg }));
 
   return res.status(422).send({
     message: 'Validation failed',
-    error: true,
     errors: extractedErrors,
+    error: true,
     data: errors.array(),
   });
+
+  // throw new CreateError("Validation failed", "Validation", Code.BAD_REQUEST, extractedErrors, errors.array());
 };
 
 export default validate;

@@ -17,6 +17,21 @@ dotenv.config({ path: path.join(__dirname, '.env') });
 
 const TRY_RESTART = 10;
 let triedRestart = 0;
+const workers: Worker[] = [];
+
+function spawnWorker() {
+  const worker = cluster.fork();
+  workers.push(worker);
+
+  worker.on('exit', (code: number, signal: string) => {
+    const workerIndex = workers.indexOf(worker);
+    if (workerIndex !== -1) {
+      workers.splice(workerIndex, 1);
+    }
+
+    logger.info(`Worker process ${worker.process.pid} exited with code ${code} and signal ${signal}`);
+  });
+}
 
 // const cpus = os.cpus();
 const server: http.Server = http.createServer(app);
@@ -27,14 +42,13 @@ if (cluster.isPrimary) {
   // for (let i = 0; i < cpus.length; ++i) {
   //   spawnWorker();
   // }
-  cluster.fork();
 
   cluster.on('exit', (worker: Worker, code: number, signal: string) => {
     logger.info(`Process ${triedRestart}: ${worker.process.pid} died with code ${code} and signal ${signal} 👻`);
 
     if (triedRestart < TRY_RESTART) {
       triedRestart++;
-      cluster.fork();
+      spawnWorker();
     } else {
       logger.info(`Worker process has crashed ${TRY_RESTART} times. Exiting process...`);
       server.close();
@@ -43,16 +57,14 @@ if (cluster.isPrimary) {
   });
 } else {
   server.listen(conf.app.port, async () => {
-    logger.info(`Server started at http://localhost:${conf.app.port}`);
     io = startSocketServer(server);
     startMetricsServer();
+    handleProcessEvent(server);
   });
 
   server.once('close', () => {
     logger.info('Server closed gracefully');
   });
 }
-
-handleProcessEvent(server);
 
 export { server, io };

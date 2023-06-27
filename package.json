@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
+    "ts-dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
+    "dev": "ts-node -r tsconfig-paths/register src/index.ts",
     "start": "node dist/index.js",
     "build": "npm run prettier:check && npm run lint && tsc --project ./tsconfig.build.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "prod": "npm run build && node dist/index.js",
@@ -65,6 +66,7 @@
     "express-rate-limit": "^6.7.0",
     "express-session": "^1.17.3",
     "express-validator": "^7.0.1",
+    "forever": "^4.0.3",
     "geoip-lite": "^1.4.7",
     "google-libphonenumber": "^3.2.32",
     "helmet": "^7.0.0",

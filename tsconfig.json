@@ -20,7 +20,8 @@
       "@logger/*": ["src/log/*"],
       "@helpers/*": ["src/helpers/*"],
       "@enums/*": ["src/enums/*"],
-      "@token/*": ["src/token/*"]
+      "@token/*": ["src/token/*"],
+      "@messages/*": ["src/messages/*"]
     },
     "allowJs": true,
     "sourceMap": true,

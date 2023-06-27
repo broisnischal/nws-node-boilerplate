@@ -14,9 +14,7 @@ class HttpResponse {
     if (data) {
       this.data = data;
     }
-
     this.timeStamp = new Date().toLocaleString();
-
     Object.assign(this, additionalParams);
   }
 

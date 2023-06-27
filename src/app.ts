@@ -4,10 +4,11 @@ import sanitizeInput from '@/helpers/sanitize';
 import logger from '@/log/logger';
 // import cluster from 'node:cluster';
 import errorHandler from '@/utils/errorHandler';
-import CreateError from './utils/customError';
-import { Code } from './enum/v1/code.enum';
-import connectDB from './config/mongoose.config';
-import conf from './config.default';
+import routes from '@/routes/routes';
+import CreateError from '@/utils/customError';
+import { Code } from '@/enum/v1/code.enum';
+import connectDB from '@/config/mongoose.config';
+import conf from '@/config.default';
 
 const app: Application = express();
 
@@ -43,6 +44,9 @@ app.get('/', (req: Request, res: Response) => {
 
   // cluster.worker?.kill();
 });
+
+// -----------------@ routing
+app.use('/api', routes);
 
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 app.get('*', (req: Request, res: Response, next: NextFunction) => {

@@ -1,20 +1,31 @@
 ---
-name: Feature Request
-about: Suggest a new feature or enhancement
+name: Pull Request
+about: Submit code changes or bug fixes
 ---
 
 # Description
 
-<!-- A clear and concise description of the feature or enhancement -->
+<!-- A clear and concise description of the changes made in this pull request -->
 
-## Motivation
+## Related Issue
 
-<!-- Explain why this feature or enhancement is needed -->
+<!-- If this pull request is related to an issue, provide the issue number here -->
 
-## Implementation Details
+## Motivation and Context
 
-<!-- Describe the implementation details or proposed solution -->
+<!-- Explain the motivation or context behind this pull request -->
 
-## Additional Information
+## How to Test
 
-<!-- Add any other information or screenshots about the feature request here -->
+<!-- Provide steps or instructions on how to test the changes made in this pull request -->
+
+## Checklist
+
+<!-- Mark the completed tasks with [x] -->
+
+- [ ] Code has been tested
+- [ ] Documentation has been updated
+- [ ] Changes are backward-compatible
+- [ ] All tests pass
+- [ ] Code follows the project's coding conventions
+- [ ] Commit message follows the project's commit message guidelines
