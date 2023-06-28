@@ -4,11 +4,11 @@ import logger from '@/log/logger';
 
 const connectDB = async (URI?: string): Promise<void> => {
   try {
-    await mongoose.connect(URI ?? conf.app.mongoURI, {});
+    await mongoose.connect(URI ?? conf.app.mongoURI);
   } catch (error: any) {
     logger.error(`Error:", ${error.message}`);
     console.log(error);
-    process.exit(1);
+    // process.exit(1);
   }
 };
 

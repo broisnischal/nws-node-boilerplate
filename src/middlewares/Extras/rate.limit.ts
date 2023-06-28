@@ -5,7 +5,7 @@ import rateLimit, { MemoryStore } from 'express-rate-limit';
 const allowlist = [address.ip()];
 
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 900000, // 15 minutes
   max: 100,
   standardHeaders: true,
   handler: (req, res) => {

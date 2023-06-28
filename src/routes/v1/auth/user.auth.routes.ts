@@ -1,4 +1,4 @@
-import { registerUser } from '@/controllers/v1/auth';
+import { loginUser, registerUser } from '@/controllers/v1/auth';
 import userValidation from '@/validators/models/user.validate';
 import { Router } from 'express';
 import validate from '@/validators';
@@ -10,5 +10,6 @@ userAuthRouter.get('/', async (req, res) => {
 });
 
 userAuthRouter.post('/', userValidation(), validate, registerUser);
+userAuthRouter.post('/login', loginUser);
 
 export default userAuthRouter;

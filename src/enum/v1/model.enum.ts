@@ -1,6 +1,7 @@
 import { Role, Token } from '@/types/index.types';
 
 interface IEnum {
+  role: Role[];
   token: {
     type: Token[];
   };
@@ -10,6 +11,7 @@ interface IEnum {
 }
 
 export const ModelEnum: IEnum = {
+  role: ['User', 'Admin', 'Merchant', 'Agent'],
   token: {
     type: ['forgot', 'reset', 'change', 'verify'],
   },

@@ -1,10 +1,11 @@
 // eslint-disable-next-line object-curly-newline
 import { Document, ObjectId, Schema, Types, Model, model } from 'mongoose';
 import ModelEnum from '@/enum/v1/model.enum';
+import { Token } from '@/types/index.types';
 
 export interface IToken extends Document {
   user: Types.ObjectId | ObjectId;
-  type: string;
+  type: Token;
   userModel: string;
 }
 

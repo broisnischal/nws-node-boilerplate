@@ -20,6 +20,19 @@ export const registerUser = asyncHandler(async (req, res, next, session) => {
   return res.send(new HttpResponse(Code.SUCCESS, authMessage.register.success, newUser));
 });
 
-export const loginUser = asyncHandler(async (req, _res, _next, _session) => {
-  console.log(req);
+export const loginUser = asyncHandler(async (req, res, _next, _session) => {
+  const { usernameoremail, password } = req.body;
+
+  console.log('here');
+
+  const user = await User.findOne({ $or: [{ usernameoremail }, { email: usernameoremail }] });
+  if (!user) throw new CreateError(authMessage.login.noUserExists, 'Auth', Code.BAD_REQUEST);
+
+  if (!user.comparePassword(password)) {
+    throw new CreateError(authMessage.login.invalidPassword, 'Auth', Code.BAD_REQUEST);
+  }
+
+  console.log(user);
+
+  return res.send(new HttpResponse(Code.SUCCESS, authMessage.login.success, user));
 });

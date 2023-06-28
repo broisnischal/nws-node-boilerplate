@@ -15,7 +15,7 @@ export type MongooseId = ObjectId;
 export type EncryptionFunction<T> = (data: T, publicKey?: string) => string;
 export type DecryptionFunction<T> = (encryptedId: string, privateKey?: string) => T;
 
-export type ErrorType = 'General' | 'Raw' | 'Validation' | 'Unauthorized';
+export type ErrorType = 'General' | 'Raw' | 'Validation' | 'Unauthorized' | 'Auth';
 
 export type Role = 'User' | 'Admin' | 'Merchant' | 'Agent';
 export type Token = 'forgot' | 'reset' | 'change' | 'verify';
@@ -44,9 +44,21 @@ export type SocketCorsOptions = {
 
 export type AppConfig = {
   mongoURI: string;
+  redisURI: string;
   localMongo: string;
   remoteMongo: string;
   port: string | number;
+};
+
+export type SessionConfig = {
+  secret: string;
+  resave: boolean;
+  saveUninitialized: boolean;
+  cookie: {
+    secure: boolean;
+    httpOnly: boolean;
+    maxAge: number;
+  };
 };
 
 export type SocketConfig = {
@@ -59,4 +71,5 @@ export type Config = {
   privateKey: string;
   database: string;
   socket: SocketConfig;
+  session: SessionConfig;
 };

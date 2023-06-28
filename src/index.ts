@@ -11,7 +11,7 @@ import cluster, { Worker } from 'cluster';
 import http from 'http';
 import conf from './config.default';
 import startSocketServer from './socket/configure.socket';
-import { startMetricsServer } from './utils/merits';
+// import connectDB from './config/mongoose.config';
 
 dotenv.config({ path: path.join(__dirname, '.env') });
 
@@ -24,9 +24,6 @@ const server: http.Server = http.createServer(app);
 let io: Server | undefined;
 
 if (cluster.isPrimary) {
-  // for (let i = 0; i < cpus.length; ++i) {
-  //   spawnWorker();
-  // }
   cluster.fork();
 
   cluster.on('exit', (worker: Worker, code: number, signal: string) => {
@@ -43,10 +40,10 @@ if (cluster.isPrimary) {
   });
 } else {
   server.listen(conf.app.port, async () => {
-    logger.info(`Server started at http://localhost:${conf.app.port}`);
-    io = startSocketServer(server);
-    startMetricsServer();
+    logger.info(`Database connected and started at http://localhost:${conf.app.port}`);
   });
+
+  io = startSocketServer(server);
 
   server.once('close', () => {
     logger.info('Server closed gracefully');
