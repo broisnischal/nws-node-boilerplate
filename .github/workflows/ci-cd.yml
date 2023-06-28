@@ -36,7 +36,16 @@ jobs:
       - name: Deploy to production
         run: |
           if [ "$GITHUB_REF" = "refs/heads/main" ]; then
-            npm run prod
+            node dist/index.js &
+            sleep 5
+            curl --retry 10 --retry-connrefused --retry-delay 5 --retry-max-time 30 http://localhost:3000
+            exit_status=$?
+            if [ $exit_status -eq 0 ]; then
+              echo "Server is running and accessible."
+            else
+              echo "Server did not start or is not accessible."
+              exit 1
+            fi
           else
             echo "Skipping production deployment for branch other than main"
           fi
