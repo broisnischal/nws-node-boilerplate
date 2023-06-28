@@ -25,7 +25,7 @@ jobs:
         run: rm -rf node_modules
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run tests
         run: npm test
@@ -34,4 +34,9 @@ jobs:
         run: npm run build
 
       - name: Deploy to production
-        run: npm run prod
+        run: |
+          if [ "$GITHUB_REF" = "refs/heads/main" ]; then
+            npm run prod
+          else
+            echo "Skipping production deployment for branch other than main"
+          fi
