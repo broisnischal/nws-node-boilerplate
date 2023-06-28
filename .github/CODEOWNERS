@@ -1,1 +1,15 @@
-/ @neeswebservices
+# CODEOWNERS file
+
+# Directories owned by specific individuals or teams
+
+/docs/ @neeswebservices @team1
+/src/ @neeswebservices @team2
+
+# Specific files owned by individuals or teams
+
+/src/components/Button.js @sandeshthapa @team4
+
+# Wildcard patterns for file types
+
+_.md @nischaldahal @team5
+_.css @learnwithwhitecoal @team6
