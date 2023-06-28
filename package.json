@@ -17,7 +17,8 @@
     "test": "mocha -r tsconfig-paths/register -r ts-node/register  \"./src/test/**/*.ts\" --exit",
     "post-commit-action": "git add .",
     "docs": "npx ts-node-dev docs/index.ts",
-    "clean": "npm cache clean --force"
+    "clean": "npm cache clean --force",
+    "docker:run": "docker-compose up --build"
   },
   "lint-staged": {
     "./src/**/*.+(ts|js)": [

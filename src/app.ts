@@ -19,7 +19,7 @@ import connectDB from './config/mongoose.config';
 
 const app: Application = express();
 (async () => {
-  await connectDB(conf.app.remoteMongo);
+  await connectDB(conf.app.mongoURI);
 })();
 
 const sessionData = {
