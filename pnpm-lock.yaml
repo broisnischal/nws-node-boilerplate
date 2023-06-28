@@ -117,6 +117,7 @@ specifiers:
   uuid: ^9.0.0
   uuidv4: ^6.2.13
   winston: ^3.9.0
+  word-wrap: ^1.2.3
   zod: ^3.21.4
 
 dependencies:
@@ -200,6 +201,7 @@ dependencies:
   uuid: 9.0.0
   uuidv4: 6.2.13
   winston: 3.9.0
+  word-wrap: 1.2.3
   zod: 3.21.4
 
 devDependencies:
@@ -12123,6 +12125,11 @@ packages:
       '@babel/types': 7.22.5
       assert-never: 1.2.1
       babel-walk: 3.0.0-canary-5
+    dev: false
+
+  /word-wrap/1.2.3:
+    resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
+    engines: {node: '>=0.10.0'}
     dev: false
 
   /wordwrap/0.0.3:

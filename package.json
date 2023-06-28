@@ -16,7 +16,8 @@
     "prettier:check": "prettier --config .prettierrc \"./src/**/*.+(js|json|ts)\" --check --ignore-unknown",
     "test": "mocha -r tsconfig-paths/register -r ts-node/register  \"./src/test/**/*.ts\" --exit",
     "post-commit-action": "git add .",
-    "docs": "npx ts-node-dev docs/index.ts"
+    "docs": "npx ts-node-dev docs/index.ts",
+    "clean": "npm cache clean --force"
   },
   "lint-staged": {
     "./src/**/*.+(ts|js)": [
@@ -115,6 +116,7 @@
     "uuid": "^9.0.0",
     "uuidv4": "^6.2.13",
     "winston": "^3.9.0",
+    "word-wrap": "^1.2.3",
     "zod": "^3.21.4"
   },
   "devDependencies": {
